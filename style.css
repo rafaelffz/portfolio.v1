@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+    padding: 40px;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-areas: 
+    "perfil projetos projetos"
+    "perfil projeto1 projeto2"
+    "infos projeto3 projeto4"
+    "infos none none"
+    "techs none none";
+}
+
+#perfil-card {
+    display: flex;
+    grid-area: perfil;
+    flex-direction: column;
+    margin: 0px 60px 30px 0px;
+    background-color: var(--bg-cards);
+    width: 348px;
+    height: 292px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    margin: 32px auto 30px;
+    border: 2px solid #4263EB;
+    padding: 2px;
+    animation: floating 3s infinite linear;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px)
+    } 50% {
+        transform: translateY(5px)
+    } 100% {
+        transform: translateY(0px);
+    }
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#nome, #ocupacao {
+    text-align: center;
+}
+
+#nome {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+#ocupacao {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#infos {
+    display: flex;
+    grid-area: infos;
+    margin-right: 60px;
+    background-color: var(--bg-cards);
+    width: 348px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 34px 0;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    margin-left: 40px;
+}
+
+li {
+    display: flex;
+    margin-bottom: 28px;
+    align-items: center;
+}
+
+#location, #github, #instagram {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 400;
+    transition: 100ms linear;
+}
+
+#location:hover {
+    font-size: 15px;
+    color: #a8a3be;
+    border-bottom: 1px solid #a8a3be;
+}
+
+#github:hover {
+    font-size: 15px;
+    color: #a8a3be;
+    border-bottom: 1px solid #a8a3be;
+}
+
+#instagram:hover {
+    font-size: 15px;
+    color: #a8a3be;
+    border-bottom: 1px solid #a8a3be;
+}
+
+.info {
+    margin-left: 15px;
+}
+
+#techs-card {
+    grid-area: techs;
+    margin: 30px 60px 0px 0px;
+    background-color: var(--bg-cards);
+    width: 348px;
+    height: 130px;
+    border-radius: 20px;
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.tecno {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    width: max-content;
+    transition: 150ms linear;
+}
+
+.tecno:hover {
+    color: #a8a3be;
+    transform: translateX(5px);
+    border-bottom: 1px solid #a8a3be;
+}
+
+
+.html {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    background-color: var(--bg-techs);
+    color: #000;
+    margin-left: 30px;
+    width: 86px;
+    height: 24px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.css {
+    position: absolute;
+    margin-left: 131px;
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    background-color: var(--bg-techs);
+    color: #000;
+    width: 86px;
+    height: 24px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.javascript {
+    margin-left: 232px;
+    background-color: var(--bg-techs);
+    color: #000;
+    margin-right: 30px;
+    width: 86px;
+    height: 24px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.skill {
+    cursor: default;
+    transition: 200ms linear;
+}
+
+.skill:hover {
+    transform: scale(1.2);
+}
+
+div#projects {
+    display: flex;
+    grid-area: projetos;
+    background-color: var(--bg-cards);
+    width: 850px;
+    height: 86px;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.my-projects {
+    margin: 30px 0 30px 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+a#link-projeto1 {
+    display: flex;
+    grid-area: projeto1;
+    background-color: var(--bg-cards);
+    margin-right: 30px;
+    border-radius: 20px;
+    width: 410px;
+    height: 186px;
+    padding: 30px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#projeto1 {
+    transition: 100ms linear;
+}
+
+#projeto1:hover {
+    transform: scale(1.03);
+}
+
+.folder1 {
+    height: 20px;
+    width: 20px;
+    margin-right: 16px;
+}
+
+.title-project1 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.desc-project1 {
+    position: absolute;
+    top: 70px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.starp1 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    position: absolute;
+}
+
+.number-starp1 {
+    position: absolute;
+    top: 138px;
+    left: 58px;
+}
+
+.git-branchp1 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    left: 102px;
+    position: absolute;
+}
+
+.number-gitp1 {
+    top: 138px;
+    left: 130px;
+    position: absolute;
+}
+
+a#link-projeto2 {
+    display: flex;
+    grid-area: projeto2;
+    background-color: var(--bg-cards);
+    margin-right: 30px;
+    border-radius: 20px;
+    width: 410px;
+    height: 186px;
+    padding: 30px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#projeto2 {
+    transition: 100ms linear;
+}
+
+#projeto2:hover {
+    transform: scale(1.03);
+}
+
+.folder2 {
+    height: 20px;
+    width: 20px;
+    margin-right: 16px;
+}
+
+.title-project2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.desc-project2 {
+    position: absolute;
+    top: 70px;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.starp2 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    position: absolute;
+}
+
+.number-starp2 {
+    position: absolute;
+    top: 138px;
+    left: 58px;
+}
+
+.git-branchp2 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    left: 102px;
+    position: absolute;
+}
+
+.number-gitp2 {
+    top: 138px;
+    left: 130px;
+    position: absolute;
+}
+
+a#link-projeto3 {
+    display: flex;
+    grid-area: projeto3;
+    background-color: var(--bg-cards);
+    margin-right: 30px;
+    border-radius: 20px;
+    width: 410px;
+    height: 186px;
+    padding: 30px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#projeto3 {
+    transition: 100ms linear;
+}
+
+#projeto3:hover {
+    transform: scale(1.03);
+}
+
+.title-project3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.folder3 {
+    height: 20px;
+    width: 20px;
+    margin-right: 16px;
+}
+
+.desc-project3 {
+    position: absolute;
+    top: 70px;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.starp3 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    position: absolute;
+}
+
+.number-starp3 {
+    position: absolute;
+    top: 138px;
+    left: 58px;
+}
+
+.git-branchp3 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    left: 102px;
+    position: absolute;
+}
+
+.number-gitp3 {
+    top: 138px;
+    left: 130px;
+    position: absolute;
+}
+
+a#link-projeto4 {
+    display: flex;
+    grid-area: projeto4;
+    background-color: var(--bg-cards);
+    margin-right: 30px;
+    border-radius: 20px;
+    width: 410px;
+    height: 186px;
+    padding: 30px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#projeto4 {
+    transition: 100ms linear;
+}
+
+#projeto4:hover {
+    transform: scale(1.03);
+}
+
+.title-project4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.folder4 {
+    height: 20px;
+    width: 20px;
+    margin-right: 16px;
+}
+
+.desc-project4 {
+    position: absolute;
+    top: 70px;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.starp4 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    position: absolute;
+}
+
+.number-starp4 {
+    position: absolute;
+    top: 138px;
+    left: 58px;
+}
+
+.git-branchp4 {
+    width: 20px;
+    height: 20px;
+    top: 136px;
+    left: 102px;
+    position: absolute;
+}
+
+.number-gitp4 {
+    top: 138px;
+    left: 130px;
+    position: absolute;
+}
