@@ -121,7 +121,6 @@ a {
     flex-wrap: wrap;
     padding-bottom: 20px;
     border-radius: 20px;
-    /* justify-content: center; */
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
